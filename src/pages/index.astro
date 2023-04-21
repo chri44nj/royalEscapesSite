@@ -1,8 +1,160 @@
 ---
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+import Testimonials from "../components/Testimonials.astro";
+import AddTestimonial from "../components/AddTestimonial.astro";
 ---
 
 <MainLayout title="Royal Escapes" h1="Velkommen!">
-  <p>You little rascal!</p>
+  <section class="heading">
+    <h1>Vind 6 billetter til Royal Escapes!</h1>
+  </section>
+
+  <section class="explanation">
+    <h2>Så, hvad går det egentlig ud på?</h2>
+  </section>
+
+  <section class="contest">
+    <h2>Konkurrencen</h2>
+    <div class="countdown">
+      <div>
+        <p id="days">00</p>
+        <span>Dage</span>
+      </div>
+      <div>
+        <p id="hours">00</p>
+        <span>Timer</span>
+      </div>
+      <div>
+        <p id="minutes">00</p>
+        <span>Minutter</span>
+      </div>
+      <div>
+        <p id="seconds">00</p>
+        <span>Sekunder</span>
+      </div>
+    </div>
+    <h3>Indtast kode</h3>
+    <div class="codeInput">
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+      <input type="text" maxlength="1" />
+    </div>
+    <center><button class="confirm"> Bekræft</button></center>
+  </section>
+
+  <section class="hallOfFame">
+    <h2>Royal Escapes hall of fame</h2>
+  </section>
+
+  <section class="testimonials">
+    <h2>Det siger vores gæster om os</h2>
+    <Testimonials />
+    <AddTestimonial />
+  </section>
 </MainLayout>
+
+<style>
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  /** Sections **/
+  .heading {
+  }
+
+  .explanation {
+  }
+
+  .contest {
+  }
+
+  .hallOfFame {
+  }
+
+  .testimonials {
+  }
+
+  /** CodeInput **/
+  .codeInput {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .codeInput input {
+    max-width: 75px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .confirm {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .confirm:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /** Countdown **/
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: "Dosis", sans-serif;
+    margin-bottom: 4rem;
+  }
+
+  .countdown div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+  .countdown p {
+    font-size: 3rem;
+  }
+
+  .countdown span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+</style>

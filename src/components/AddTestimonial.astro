@@ -1,0 +1,44 @@
+---
+---
+
+<form>
+  <h3>Tilføj din egen anmeldelse</h3>
+  <div>
+    <label for="title">En passende titel til din anmeldelse:</label>
+    <input id="title" name="title" type="text" required />
+  </div>
+  <div>
+    <label for="long">En god beskrivelse af din oplevelse hos Royal Escapes:</label>
+    <textarea id="long" name="long" rows="5" required></textarea>
+  </div>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  const headers = "";
+  const url = "https://wxgeifmsekawywfbkgsk.supabase.co/rest/v1/Testimonials";
+
+  function addTestimonial(newTestimonial) {
+    const options = {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(newTestimonial),
+    };
+
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data:", data);
+        window.location.href = "/addTestimonalFeedback";
+      });
+  }
+</script>
+
+<style>
+  form,
+  form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
