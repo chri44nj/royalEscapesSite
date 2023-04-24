@@ -1,4 +1,4 @@
-var countdownDate = new Date("Jul 19, 2023 00:00:00").getTime();
+var countdownDate = new Date("May 4, 2023 00:00:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countdownDate - now;
@@ -14,18 +14,15 @@ var x = setInterval(function () {
   document.getElementById("seconds").innerHTML = seconds;
 }, 1000);
 
-const inputs = document.querySelectorAll("input"); // Get all the input fields
+const inputs = document.querySelectorAll("div.codeInputs input");
 
-// Add an event listener to each input field
 inputs.forEach((input, index) => {
   input.addEventListener("input", (event) => {
     const value = event.target.value;
 
     if (value.length === 1) {
-      // If the input field has a single digit
       if (index < inputs.length - 1) {
-        // If there is another input field after this one
-        inputs[index + 1].focus(); // Move the focus to the next input field
+        inputs[index + 1].focus();
       }
     }
   });

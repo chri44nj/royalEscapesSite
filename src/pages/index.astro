@@ -35,11 +35,11 @@ import AddTestimonial from "../components/AddTestimonial.astro";
       </div>
     </div>
     <h3>Indtast kode</h3>
-    <div class="codeInput">
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
+    <div class="codeInputs">
+      <input class="codeInput" type="text" maxlength="1" />
+      <input class="codeInput" type="text" maxlength="1" />
+      <input class="codeInput" type="text" maxlength="1" />
+      <input class="codeInput" type="text" maxlength="1" />
     </div>
     <center><button class="confirm"> Bekræft</button></center>
   </section>
@@ -95,14 +95,14 @@ import AddTestimonial from "../components/AddTestimonial.astro";
   }
 
   /** CodeInput **/
-  .codeInput {
+  .codeInputs {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 2rem;
   }
 
-  .codeInput input {
+  .codeInputs input {
     max-width: 75px;
     text-align: center;
     font-weight: bold;
@@ -111,6 +111,7 @@ import AddTestimonial from "../components/AddTestimonial.astro";
     background-color: black;
     color: white;
     border-radius: 10px;
+    text-transform: uppercase;
   }
 
   .confirm {
