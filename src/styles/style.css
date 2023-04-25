@@ -23,5 +23,8 @@ button {
 }
 
 main {
-  margin-inline: 10%;
+}
+
+.align {
+  text-align: center;
 }
