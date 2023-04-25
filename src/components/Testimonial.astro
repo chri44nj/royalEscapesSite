@@ -1,14 +1,22 @@
 ---
+import Button from "./Button.astro";
 const { data } = Astro.props;
 ---
 
 <article>
   <h3>{data.title}</h3>
   <p>{data.description}</p>
+  <div class="button">
+    <Button link={"testimonials/" + data.title + "-" + data.id} title="Læs mere" />
+  </div>
 </article>
 
 <style>
   article {
     margin-bottom: 2rem;
+  }
+
+  .button {
+    margin-top: 3rem;
   }
 </style>

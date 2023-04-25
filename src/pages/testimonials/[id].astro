@@ -1,0 +1,57 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import "../../styles/style.css";
+
+export async function getStaticPaths() {
+  const data = await fetch("https://wxgeifmsekawywfbkgsk.supabase.co/rest/v1/Testimonials", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4Z2VpZm1zZWthd3l3ZmJrZ3NrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NjUxNzIsImV4cCI6MTk5NzA0MTE3Mn0.DgL4l_u0vOEoBT3ZRD2nLGWsik5E0CbdGY6C7gFnUX8",
+    },
+  }).then((response) => response.json());
+
+  return data.map((singleTestimonial) => {
+    return {
+      params: { id: singleTestimonial.title + "-" + singleTestimonial.id },
+      props: { singleTestimonial },
+    };
+  });
+}
+
+const { singleTestimonial } = Astro.props;
+---
+
+<MainLayout title={singleTestimonial.title}>
+  <section>
+    <div>
+      <h2>{singleTestimonial.title}</h2>
+      <p>{singleTestimonial.description}</p>
+      <p>{"-" + " " + singleTestimonial.name}</p>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  section {
+    margin-block: 4rem;
+    padding-inline: 10rem;
+  }
+  div {
+    background-color: royalblue;
+    padding: 2rem;
+  }
+  p {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  h2,
+  p {
+    color: white;
+  }
+</style>

@@ -1,41 +1,64 @@
 ---
 ---
 
-<form>
+<section>
   <h3>Tilføj din egen anmeldelse</h3>
-  <div>
-    <label for="title">En passende titel til din anmeldelse:</label>
-    <input id="title" name="title" type="text" required />
-  </div>
-  <div>
-    <label for="long">En god beskrivelse af din oplevelse hos Royal Escapes:</label>
-    <textarea id="long" name="long" rows="5" required></textarea>
-  </div>
-  <button type="submit">Send</button>
-</form>
+  <form>
+    <div>
+      <label for="title">En passende titel til din anmeldelse:</label>
+      <input id="title" name="title" type="text" required />
+    </div>
+    <div>
+      <label for="long">En god beskrivelse af din oplevelse hos Royal Escapes:</label>
+      <textarea id="long" name="long" rows="5" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+</section>
 
 <script>
-  const headers = "";
-  const url = "https://wxgeifmsekawywfbkgsk.supabase.co/rest/v1/Testimonials";
-
   function addTestimonial(newTestimonial) {
+    const url = "https://wxgeifmsekawywfbkgsk.supabase.co/rest/v1/Testimonials";
+    const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4Z2VpZm1zZWthd3l3ZmJrZ3NrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE0NjUxNzIsImV4cCI6MTk5NzA0MTE3Mn0.DgL4l_u0vOEoBT3ZRD2nLGWsik5E0CbdGY6C7gFnUX8";
+
     const options = {
       method: "POST",
-      headers: headers,
+      headers: {
+        apikey: api,
+        Authorization: "Bearer " + api,
+        "Content-Type": "application/json",
+        Prefer: "return=representation",
+      },
       body: JSON.stringify(newTestimonial),
     };
+
+    console.log("options:", options);
 
     fetch(url, options)
       .then((res) => res.json())
       .then((data) => {
         console.log("data:", data);
-        window.location.href = "/addTestimonalFeedback";
+        window.location.href = "/addTestimonialFeedback";
       });
   }
+
+  const form = document.querySelector("form");
+  console.log("form.elements", form.elements);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const obj = {
+      title: form.elements.title.value,
+      description: form.elements.long.value,
+    };
+
+    addTestimonial(obj);
+  });
 </script>
 
 <style>
-  form,
+  section,
   form div {
     display: flex;
     flex-direction: column;
