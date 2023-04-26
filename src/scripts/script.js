@@ -4,7 +4,7 @@ const navItems = document.querySelector(".navItems");
 burgerMenu.addEventListener("mousedown", () => {
   burgerMenu.classList.toggle("active");
   navItems.classList.toggle("active");
-  console.log("Hey fisse!");
+  console.log("Må du have en god dag!");
 });
 
 document.querySelectorAll(".navItem").forEach((n) =>
@@ -48,3 +48,18 @@ inputs.forEach((input, index) => {
     }
   });
 });
+
+function showConfirmation(event) {
+  event.preventDefault(); // prevent the button from navigating to the URL
+  var confirmation = confirm("Er du sikker?");
+  if (confirmation == true) {
+    var success = confirm("Success! Koden var korrekt - du har fået tilføjet ét lod i puljen om at vinde 6x billeter til et Escape Room af eget valg!");
+    if (success == true) {
+      // Handle closing the pop-up or redirecting to another page
+    }
+  }
+  return false;
+}
+
+var confirmButton = document.querySelector(".confirm");
+confirmButton.addEventListener("click", showConfirmation);

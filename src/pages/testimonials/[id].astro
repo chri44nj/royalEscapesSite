@@ -25,33 +25,45 @@ const { singleTestimonial } = Astro.props;
   <section>
     <div>
       <h2>{singleTestimonial.title}</h2>
-      <p>{singleTestimonial.description}</p>
-      <p>{"-" + " " + singleTestimonial.name}</p>
+      <p>" {singleTestimonial.description} "</p>
+      <h3>{"-" + " " + singleTestimonial.name}</h3>
+    </div>
+
+    <div>
+      <h2>Kæmpe optur over Royal Escapes</h2>
+      <p>" Aldrig har det været så fedt, at blive skræmt fra vid og sans. Vi løste lige præcis ikke gåderne i tide - FUCK! Vi ses når nerverne igen er dulmet ned og pengepungen er fuld! "</p>
+      <h3>- Mister Escape</h3>
+    </div>
+
+    <div>
+      <h2>Jeg vil have mine penge tilbage!!</h2>
+      <p>" Jeg var af den overbevisning, at jeg havde betalt for at besøge vores majestæt dronningen. Skuffelsen er stor og mit blodtryk er højt. Skam jer! "</p>
+      <h3>- Royalist_mama_47</h3>
     </div>
   </section>
 </MainLayout>
 
 <style>
   section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-block: 4rem;
-    padding-inline: 10rem;
+    background-color: #f2e2d0;
   }
   div {
-    background-color: royalblue;
-    padding: 2rem;
-  }
-  p {
-    font-weight: 600;
-    margin-top: 1rem;
-  }
-
-  h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
+    padding-block: 2rem;
   }
 
   h2,
+  h3 {
+    text-align: center;
+    color: #752312;
+    margin-top: 1rem;
+  }
+
   p {
-    color: white;
+    margin-top: 1rem;
+    max-width: 800px;
   }
 </style>

@@ -1,13 +1,110 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <footer>
-  <p>Copyright motherfuckers!</p>
+  <div class="SoMe">
+    <a target="blank" href="https://www.facebook.com/royalescapescph"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a target="blank" href="https://www.instagram.com/royalescapescph/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+  </div>
+  <div class="container">
+    <div>
+      <i class="fa fa-envelope" onclick="location.href='mailto:info@royalescapes.dk?subject=Et brev til Royal Escapes!&body=Hvad mon der skal stå her?'"></i>
+      <p>info@royalescapes.dk</p>
+    </div>
+    <div>
+      <a target="blank" href="https://www.google.com/maps/search/Fredericiagade+30,+1310+K%C3%B8benhavn"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+      <p>Royal Escapes, København K, <br />Fredericiagade 30, 1310 København</p>
+    </div>
+  </div>
+  <p class="copyright">Copyright Royal Escapes 2023© All Rights Reserved</p>
 </footer>
 
 <style>
+  .fa:hover {
+    color: #752312;
+  }
+
+  .fa-envelope {
+    cursor: pointer;
+  }
+
+  .fa-map-marker {
+    color: black;
+  }
   footer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 3rem;
+    height: 400px;
+    background-color: black;
+  }
+
+  .SoMe {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .SoMe a {
+    color: white;
+  }
+
+  .copyright {
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  .container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-block: 3rem;
+    background-color: white;
+    text-align: center;
+    width: 400px;
+    height: 175px;
+  }
+
+  .fa {
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .container div {
+      width: 300px;
+      height: 150px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    footer {
+      height: auto;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .container div {
+      width: 250px;
+      height: 125px;
+      padding-block: 1rem;
+    }
   }
 </style>

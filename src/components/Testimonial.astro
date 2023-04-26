@@ -9,7 +9,7 @@ const { data } = Astro.props;
     <h3 class="title">{data.title}</h3>
     <div class="innerContainer">
       <i class="fa fa-angle-left" style="font-size:3rem"></i>
-      <p class="description">{data.description}</p>
+      <p class="description">" {data.description} "</p>
       <i class="fa fa-angle-right" style="font-size:3rem"></i>
     </div>
     <Button link={"testimonials/" + data.title + "-" + data.id} title="Læs mere" />
@@ -59,11 +59,11 @@ const { data } = Astro.props;
     }
 
     .fa-angle-left {
-      padding-left: 2rem;
+      margin-left: 2rem;
     }
 
     .fa-angle-right {
-      padding-right: 2rem;
+      margin-right: 2rem;
     }
   }
 </style>

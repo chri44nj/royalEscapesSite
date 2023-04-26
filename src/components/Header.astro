@@ -4,12 +4,12 @@
 <nav>
   <a href="/"><img class="logo" src="/img/logo.png" alt="" /></a>
   <div class="navItems">
-    <li><a class="navItem" href="#"></a>Escape Rooms <i class="fa fa-angle-down"></i></li>
-    <li><a class="navItem" href="#"></a>Book nu</li>
-    <li><a class="navItem" href="#"></a>Gavekort</li>
-    <li><a class="navItem" href="campaign"></a>Kampagne</li>
-    <li><a class="navItem" href="#"></a>Om os</li>
-    <li><a class="navItem" href="#"></a>Kontakt os</li>
+    <a target="blank" class="navItem" href="https://www.royalescapes.dk/dk/escape-rooms/">Escape Rooms <i class="fa fa-angle-down"></i></a>
+    <a target="blank" class="navItem" href="https://www.royalescapes.dk/dk/book-escape-room">Book nu</a>
+    <a target="blank" class="navItem" href="https://www.royalescapes.dk/dk/gavekort">Gavekort</a>
+    <a class="navItem" href="/">Kampagne</a>
+    <a target="blank" class="navItem" href="https://www.royalescapes.dk/dk/om-royal-escapes">Om os</a>
+    <a target="blank" class="navItem" href="https://www.royalescapes.dk/dk/kontakt-royal-escapes">Kontakt os</a>
   </div>
   <div class="burgerMenu">
     <span class="bar"></span>
@@ -21,16 +21,17 @@
 <style>
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    background-color: white;
+    background-color: #f2e2d0;
     padding-inline: 10%;
     z-index: 11;
+    gap: 4rem;
   }
 
   .logo {
@@ -39,22 +40,19 @@
 
   .navItems {
     display: flex;
-    gap: 3.5rem;
     list-style-type: none;
     text-transform: uppercase;
-  }
-
-  li {
-    cursor: pointer;
-  }
-
-  li:hover {
-    color: rgba(210, 87, 63, 1);
+    gap: 4rem;
   }
 
   a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #752312;
   }
 
   .burgerMenu {
@@ -69,7 +67,7 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #752312;
+    background-color: black;
   }
 
   @media only screen and (max-width: 1160px) {
@@ -99,7 +97,7 @@
       text-align: center;
       transition: 0.3s;
       padding-block: 1rem;
-      border-block: 10px solid #752312;
+      border-block: 10px solid black;
     }
 
     .navItems.active {

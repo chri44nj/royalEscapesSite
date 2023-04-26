@@ -4,6 +4,54 @@ import "../styles/style.css";
 ---
 
 <MainLayout title="Tak for dit bidrag">
-  <h2>Succes!</h2>
-  <p>Tak for din anmeldelse. Den vil blive synlig på siden efter godkendelse af vores hårdtarbejdende robotter.</p>
+  <section>
+    <h1>Succes!</h1>
+    <img src="/img/smilingqueen.webp" alt="" />
+    <p>Tak for din anmeldelse. Den vil blive synlig på siden, når den er godkendt af vores hårdtarbejdende undersåtter. <br /> Gud bevare Danmark! <br /> ...Og England.</p>
+  </section>
 </MainLayout>
+
+<style>
+  h1 {
+    font-size: 4rem;
+    margin-block: 1rem;
+  }
+
+  p {
+    text-align: center;
+    margin-block: 2rem;
+    font-size: 1.2rem;
+    min-width: min-content;
+    max-width: 800px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  img {
+    border-radius: 5px;
+    width: 55%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+
+    img {
+      width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    p {
+      max-width: 300px;
+    }
+  }
+</style>

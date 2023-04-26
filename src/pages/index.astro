@@ -21,8 +21,8 @@ import Escaper from "../components/Escaper.astro";
     <div class="winTickets">
       <h1>Vind 6x entrebilletter!</h1>
       <p>
-        HOLD PÅ KRONJUVELER OG MONOKEL!! Det er KONKURRENCETID og der er en majestætisk oplevelse er på højkant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blod i årene fryse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kodesprog, der er skjult her på hjemmesiden. I alt <span class="codeNumber">5</span> koder er skjult, men pas på; I har kun <span class="codeNumber">5</span> forsøg til at indtaste koderne og hver korrekt kode giver et ekstra lod i puljen. Vinderne får tilsendt <span class="codeNumber">6</span>x billetter til en stemningsfuld tur i et af vores <span class="codeNumber">3</span> Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Dungeon og The Royal Playroom.
-        Konkurrencen slutter *om 7 dage*. <br /> … Når I ud i tide?
+        HOLD P<span class="red">Å</span> KRONJUVELER OG MONOKEL -  DET ER KONKURRENCETID <br> Der er en maj<span class="blue">E</span>stætisk oplevelse er på hø<span class="flip">j</span>kant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blo <span class="blue spin">D</span> i åene fRyse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kod<span class="blue">E</span>sprog, der er skju<span class="red">l</span>t her på hjemmes<span class="flip">i</span>den. I alt <span class="codeNumber">5</span> koder er skj<span class="spin">u</span>lt, men pas på; I har kun <span class="codeNumber">5</span> forsøg til at indtaste kode<span class="blue">R</span>ne og hver korr<span class="red">e</span>kt kode giver et ekstra lod i puljen. Vi<span class="flip">n</span>der<span class="spin">n</span>e får tilsendt <span class="codeNumber">6</span>x billetter til en stemningsfuld tur i et af vores <span class="codeNumber">3</span> Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Du<span class="red">n</span>geon og The Royal Playroom.
+        <span class="flip">K</span>onkurrencen slutter fr<span class="spin">e</span>dag d. 5. maj. <br /> … Når I ud i tide?
       </p>
     </div>
   </section>
@@ -64,7 +64,7 @@ import Escaper from "../components/Escaper.astro";
     <form class="submitCode">
       <input type="input" placeholder="Navn Efternavnsen" required />
       <input type="input" placeholder="navn.efternavnsens@hotmail.com" required />
-      <button class="confirm"> Bekræft</button>
+      <button class="confirm">Bekræft</button>
     </form>
   </section>
 
@@ -220,6 +220,30 @@ import Escaper from "../components/Escaper.astro";
     font-weight: bold;
   }
 
+  .flip {
+      display: inline-block;
+  transform: (180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  }
+
+  .spin {
+      display: inline-block;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  }
+
+  .blue {
+    color: royalblue;
+  }
+
+  .red {
+    color: #752312;
+  }
+
   .contest {
     background-color: black;
   }
@@ -340,6 +364,8 @@ import Escaper from "../components/Escaper.astro";
     font-size: 1.5rem;
     text-transform: uppercase;
   }
+
+  
 
   @media only screen and (max-width: 1500px) {
     #castle {
