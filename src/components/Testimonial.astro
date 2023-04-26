@@ -5,24 +5,29 @@ const { data } = Astro.props;
 ---
 
 <div class="container">
-  <i class="fa fa-angle-left" style="font-size:3rem"></i>
   <article>
     <h3 class="title">{data.title}</h3>
-    <p>{data.description}</p>
+    <div class="innerContainer">
+      <i class="fa fa-angle-left" style="font-size:3rem"></i>
+      <p class="description">{data.description}</p>
+      <i class="fa fa-angle-right" style="font-size:3rem"></i>
+    </div>
     <Button link={"testimonials/" + data.title + "-" + data.id} title="Læs mere" />
     <p>eller</p>
     <h3 class="add">Tilføj din egen anmeldelse</h3>
   </article>
-  <i class="fa fa-angle-right" style="font-size:3rem"></i>
 </div>
 
 <style>
   .container {
+    padding-bottom: 1rem;
+  }
+
+  .innerContainer {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     align-items: center;
-    gap: 2rem;
-    padding-bottom: 1rem;
   }
   article {
     display: flex;
@@ -39,8 +44,9 @@ const { data } = Astro.props;
     color: #937e67;
   }
 
-  p {
+  .description {
     max-width: 700px;
+    padding-left: 0.6rem;
   }
 
   i {

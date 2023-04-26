@@ -20,7 +20,10 @@ import Escaper from "../components/Escaper.astro";
     <img id="clouds" src="/img/skyer.png" alt="" />
     <div class="winTickets">
       <h1>Vind 6x entrebilletter!</h1>
-      <p>HOLD PÅ KRONJUVELER OG MONOKEL!! Det er KONKURRENCETID og der er en majestætisk oplevelse er på højkant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blod i årene fryse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kodesprog, der er skjult her på hjemmesiden. I alt 5 koder er skjult, men pas på; I har kun 5 forsøg til at indtaste koderne og hver korrekt kode giver et ekstra lod i puljen. Vinderne får tilsendt 6x billetter til en stemningsfuld tur i et af vores 3 Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Dungeon og The Royal Playroom. Konkurrencen slutter *om 7 dage*… … Når I ud i tide?</p>
+      <p>
+        HOLD PÅ KRONJUVELER OG MONOKEL!! Det er KONKURRENCETID og der er en majestætisk oplevelse er på højkant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blod i årene fryse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kodesprog, der er skjult her på hjemmesiden. I alt <span class="codeNumber">5</span> koder er skjult, men pas på; I har kun <span class="codeNumber">5</span> forsøg til at indtaste koderne og hver korrekt kode giver et ekstra lod i puljen. Vinderne får tilsendt <span class="codeNumber">6</span>x billetter til en stemningsfuld tur i et af vores <span class="codeNumber">3</span> Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Dungeon og The Royal Playroom.
+        Konkurrencen slutter *om 7 dage*… … Når I ud i tide?
+      </p>
     </div>
   </section>
 
@@ -196,6 +199,11 @@ import Escaper from "../components/Escaper.astro";
 
   .winTickets p {
     font-size: 1.3rem;
+  }
+
+  .codeNumber {
+    color: #937e67;
+    font-weight: bold;
   }
 
   .contest {
