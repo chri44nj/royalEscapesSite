@@ -3,14 +3,14 @@
 
 <nav>
   <a href="/"><img class="logo" src="/img/logo.png" alt="" /></a>
-  <ul class="navItems">
+  <div class="navItems">
     <li><a class="navItem" href="#"></a>Escape Rooms <i class="fa fa-angle-down"></i></li>
     <li><a class="navItem" href="#"></a>Book nu</li>
     <li><a class="navItem" href="#"></a>Gavekort</li>
     <li><a class="navItem" href="campaign"></a>Kampagne</li>
     <li><a class="navItem" href="#"></a>Om os</li>
     <li><a class="navItem" href="#"></a>Kontakt os</li>
-  </ul>
+  </div>
   <div class="burgerMenu">
     <span class="bar"></span>
     <span class="bar"></span>
@@ -23,15 +23,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-inline: 10%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100px;
+    background-color: white;
+    padding-inline: 10%;
+    z-index: 1;
   }
 
   .logo {
     max-height: 75px;
   }
 
-  ul {
+  .navItems {
     display: flex;
     gap: 3.5rem;
     list-style-type: none;
@@ -63,7 +69,7 @@
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #1a4ede;
+    background-color: #937e67;
   }
 
   @media only screen and (max-width: 1100px) {
@@ -89,12 +95,12 @@
       top: 100px;
       gap: 0.5rem;
       flex-direction: column;
-      background-color: #eaeaea;
+      background-color: white;
       width: 100%;
       text-align: center;
       transition: 0.3s;
       padding-block: 1rem;
-      border-bottom: 5px solid #1a4ede;
+      border-bottom: 10px solid #937e67;
     }
 
     .navItems.active {
