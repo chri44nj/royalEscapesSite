@@ -3,15 +3,19 @@
 
 <nav>
   <a href="/"><img class="logo" src="/img/logo.png" alt="" /></a>
-  <ul>
-    <!-- <li><a href="/"></a>Forside</li> -->
-    <li><a href="#"></a>Escape Rooms <i class="fa fa-angle-down"></i></li>
-    <li><a href="#"></a>Book nu</li>
-    <li><a href="#"></a>Gavekort</li>
-    <li><a href="campaign"></a>Kampagne</li>
-    <li><a href="#"></a>Om os</li>
-    <li><a href="#"></a>Kontakt os</li>
+  <ul class="navItems">
+    <li><a class="navItem" href="#"></a>Escape Rooms <i class="fa fa-angle-down"></i></li>
+    <li><a class="navItem" href="#"></a>Book nu</li>
+    <li><a class="navItem" href="#"></a>Gavekort</li>
+    <li><a class="navItem" href="campaign"></a>Kampagne</li>
+    <li><a class="navItem" href="#"></a>Om os</li>
+    <li><a class="navItem" href="#"></a>Kontakt os</li>
   </ul>
+  <div class="burgerMenu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
 </nav>
 
 <style>
@@ -45,5 +49,67 @@
   a {
     color: black;
     text-decoration: none;
+  }
+
+  .burgerMenu {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1a4ede;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .burgerMenu {
+      display: block;
+      width: 250px;
+    }
+
+    .burgerMenu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burgerMenu.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(50deg);
+    }
+    .burgerMenu.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-50deg);
+    }
+
+    .navItems {
+      position: fixed;
+      left: -100%;
+      top: 100px;
+      gap: 0.5rem;
+      flex-direction: column;
+      background-color: #eaeaea;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      padding-block: 1rem;
+      border-bottom: 5px solid #1a4ede;
+    }
+
+    .navItems.active {
+      left: 0;
+    }
+
+    .icons {
+      width: auto;
+      padding-right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    p {
+      display: none;
+    }
   }
 </style>

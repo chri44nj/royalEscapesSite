@@ -1,0 +1,49 @@
+---
+const { number } = Astro.props;
+const { team } = Astro.props;
+const { time } = Astro.props;
+const { hints } = Astro.props;
+---
+
+<div class="container">
+  <div class="innerContainer">
+    <h3>#{number} escapers</h3>
+    <div class="couple">
+      <p>Team:</p>
+      <h4>&nbsp;{team}</h4>
+    </div>
+    <div class="couple">
+      <p>Tid tilbage:</p>
+      <h4>&nbsp;{time}</h4>
+    </div>
+    <div class="couple">
+      <p>Hints:</p>
+      <h4>&nbsp;{hints}</h4>
+    </div>
+  </div>
+  <img src="/img/art.jpg" alt="" />
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Dosis", sans-serif;
+    padding-bottom: 4rem;
+    padding-inline: 10rem;
+  }
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .couple {
+    display: flex;
+  }
+
+  img {
+    width: 25%;
+  }
+</style>

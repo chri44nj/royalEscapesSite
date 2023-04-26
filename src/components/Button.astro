@@ -2,25 +2,26 @@
 const { link, title } = Astro.props;
 ---
 
-<a href={link}><span>{title}</span></a>
+<button> <a href={link}><span>{title}</span></a></button>
+
 <style>
-  a {
-    background-color: white;
-    color: black;
-    font-family: "Cinzel", serif;
-    padding: 15px 35px;
+  button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #752312;
     border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+  button:hover {
+    background-color: #937e67;
+  }
+
+  button a {
+    color: white;
     font-family: "Dosis", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
-  }
-
-  a:hover {
-    background-color: royalblue;
-  }
-
-  .large {
+    text-decoration: none;
   }
 </style>

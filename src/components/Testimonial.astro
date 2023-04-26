@@ -1,22 +1,49 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 import Button from "./Button.astro";
 const { data } = Astro.props;
 ---
 
-<article>
-  <h3>{data.title}</h3>
-  <p>{data.description}</p>
-  <div class="button">
+<div class="container">
+  <i class="fa fa-angle-left" style="font-size:3rem"></i>
+  <article>
+    <h3 class="title">{data.title}</h3>
+    <p>{data.description}</p>
     <Button link={"testimonials/" + data.title + "-" + data.id} title="Læs mere" />
-  </div>
-</article>
+    <p>eller</p>
+    <h3 class="add">Tilføj din egen anmeldelse</h3>
+  </article>
+  <i class="fa fa-angle-right" style="font-size:3rem"></i>
+</div>
 
 <style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  }
   article {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .button {
-    margin-top: 3rem;
+  .title {
+    color: #752312;
+  }
+
+  .add {
+    color: #937e67;
+  }
+
+  p {
+    max-width: 700px;
+  }
+
+  i {
+    cursor: pointer;
   }
 </style>

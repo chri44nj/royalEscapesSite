@@ -1,20 +1,15 @@
 ---
 ---
 
-<section>
-  <h3>Tilføj din egen anmeldelse</h3>
-  <form>
-    <div>
-      <label for="title">En passende titel til din anmeldelse:</label>
-      <input id="title" name="title" type="text" required />
-    </div>
-    <div>
-      <label for="long">En god beskrivelse af din oplevelse hos Royal Escapes:</label>
-      <textarea id="long" name="long" rows="5" required></textarea>
-    </div>
-    <button type="submit">Send</button>
-  </form>
-</section>
+<form class="addTestimonialForm">
+  <div>
+    <input id="title" name="title" type="text" placeholder="En passende titel" required />
+  </div>
+  <div>
+    <textarea id="long" name="long" rows="5" placeholder="En god beskrivelse af din oplevelse hos Royal Escapes" required></textarea>
+  </div>
+  <button type="submit">Send</button>
+</form>
 
 <script>
   function addTestimonial(newTestimonial) {
@@ -42,7 +37,7 @@
       });
   }
 
-  const form = document.querySelector("form");
+  const form = document.querySelector(".addTestimonialForm");
   console.log("form.elements", form.elements);
 
   form.addEventListener("submit", (e) => {
@@ -58,10 +53,47 @@
 </script>
 
 <style>
-  section,
-  form div {
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+
+  input,
+  textarea {
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    padding-left: 10px;
+  }
+
+  input {
+    width: 275px;
+    height: 40px;
+  }
+
+  textarea {
+    padding-top: 10px;
+    width: 400px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #937e67;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  button:hover {
+    background-color: #752312;
+  }
+
+  h3 {
+    color: #752312;
   }
 </style>
