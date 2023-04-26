@@ -22,12 +22,19 @@ import Escaper from "../components/Escaper.astro";
       <h1>Vind 6x entrebilletter!</h1>
       <p>
         HOLD PÅ KRONJUVELER OG MONOKEL!! Det er KONKURRENCETID og der er en majestætisk oplevelse er på højkant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blod i årene fryse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kodesprog, der er skjult her på hjemmesiden. I alt <span class="codeNumber">5</span> koder er skjult, men pas på; I har kun <span class="codeNumber">5</span> forsøg til at indtaste koderne og hver korrekt kode giver et ekstra lod i puljen. Vinderne får tilsendt <span class="codeNumber">6</span>x billetter til en stemningsfuld tur i et af vores <span class="codeNumber">3</span> Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Dungeon og The Royal Playroom.
-        Konkurrencen slutter *om 7 dage*… … Når I ud i tide?
+        Konkurrencen slutter *om 7 dage*. <br /> … Når I ud i tide?
       </p>
     </div>
   </section>
 
   <section class="contest">
+    <div class="winTickets2">
+      <h1>Vind 6x entrebilletter!</h1>
+      <p>
+        HOLD PÅ KRONJUVELER OG MONOKEL!! Det er KONKURRENCETID og der er en majestætisk oplevelse er på højkant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blod i årene fryse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kodesprog, der er skjult her på hjemmesiden. I alt <span class="codeNumber">5</span> koder er skjult, men pas på; I har kun <span class="codeNumber">5</span> forsøg til at indtaste koderne og hver korrekt kode giver et ekstra lod i puljen. Vinderne får tilsendt <span class="codeNumber">6</span>x billetter til en stemningsfuld tur i et af vores <span class="codeNumber">3</span> Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Dungeon og The Royal Playroom.
+        Konkurrencen slutter *om 7 dage*. <br /> … Når I ud i tide?
+      </p>
+    </div>
     <h2>Konkurrencen slutter om</h2>
     <div class="countdown">
       <div>
@@ -197,7 +204,14 @@ import Escaper from "../components/Escaper.astro";
     z-index: 3;
   }
 
-  .winTickets p {
+  .winTickets2 {
+    display: none;
+    color: white;
+    font-family: "Dosis", sans-serif;
+  }
+
+  .winTickets p,
+  .winTickets2 p {
     font-size: 1.3rem;
   }
 
@@ -326,4 +340,367 @@ import Escaper from "../components/Escaper.astro";
     font-size: 1.5rem;
     text-transform: uppercase;
   }
+
+  @media only screen and (max-width: 1500px) {
+    #castle {
+      top: 50px;
+      left: 1000px;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    #castle {
+      top: 50px;
+      left: 900px;
+    }
+
+    .winTickets {
+      top: 1000px;
+      left: 700px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 1300px) {
+    #castle {
+      top: 50px;
+      left: 800px;
+    }
+
+    .hallOfFameArticle {
+      margin-inline: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    #castle {
+      top: 75px;
+      left: 700px;
+      width: 350px;
+    }
+
+    #stairs {
+      width: 700px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .naar {
+      left: 75px;
+    }
+
+    .i {
+      left: 260px;
+    }
+
+    .ud {
+      left: 310px;
+    }
+
+    .i2 {
+      left: 440px;
+    }
+
+    .tide {
+      left: 170px;
+    }
+
+    .questionmark {
+      left: 400px;
+    }
+
+    .winTickets {
+      top: 850px;
+      left: 650px;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    #castle {
+      top: 75px;
+      left: 600px;
+    }
+
+    #stairs {
+      top: 650px;
+    }
+
+    .winTickets {
+      top: 800px;
+      left: 600px;
+    }
+
+    .heading {
+      height: 1350px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #castle {
+      left: 500px;
+    }
+
+    .winTickets {
+      display: none;
+    }
+
+    .winTickets2 {
+      display: block;
+      padding-inline: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .winTickets2 p {
+      font-size: 1rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .contest h2 {
+      font-size: 2rem;
+    }
+
+    #testimonialsHeadline {
+      padding-top: 3rem;
+      font-size: 2rem;
+    }
+
+    .countdown div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      font-family: "Dosis", sans-serif;
+    }
+
+    .countdown p {
+      font-size: 3rem;
+    }
+
+    .countdown span {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    #castle {
+      top: 180px;
+      width: 250px;
+    }
+
+    #stairs {
+      top: 600px;
+      width: 600px;
+    }
+
+    .heading {
+      height: 1200px;
+    }
+
+    .presentation {
+      font-size: 1.2rem;
+    }
+
+    .naar {
+      left: 50px;
+      font-size: 3rem;
+    }
+
+    .i {
+      left: 148px;
+      top: 190px;
+      font-size: 3rem;
+    }
+
+    .ud {
+      left: 175px;
+      top: 190px;
+      font-size: 3rem;
+    }
+
+    .i2 {
+      left: 255px;
+      top: 190px;
+      font-size: 3rem;
+    }
+
+    .tide {
+      left: 105px;
+      top: 240px;
+      font-size: 4rem;
+    }
+
+    .questionmark {
+      left: 225px;
+      top: 240px;
+      font-size: 4rem;
+    }
+
+    #royalHeadline {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #castle {
+      left: 400px;
+    }
+
+    #stairs {
+      top: 550px;
+      width: 550px;
+    }
+
+    .heading {
+      height: 1100px;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    #castle {
+      left: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #castle {
+      left: 200px;
+    }
+
+    #clouds {
+      width: 100%;
+      top: 400px;
+      z-index: 2;
+    }
+
+    #stairs {
+      top: 500px;
+      width: 450px;
+    }
+
+    .winTickets {
+      position: absolute;
+      top: 1000px;
+      left: 700px;
+      z-index: 3;
+    }
+
+    .naar {
+      left: 25px;
+      top: 130px;
+      z-index: 10;
+    }
+
+    .i {
+      left: 123px;
+      top: 140px;
+      z-index: 10;
+    }
+
+    .ud {
+      left: 150px;
+      top: 150px;
+      z-index: 10;
+    }
+
+    .i2 {
+      left: 230px;
+      top: 150px;
+      z-index: 10;
+    }
+
+    .tide {
+      left: 80px;
+      top: 190px;
+      z-index: 10;
+    }
+
+    .questionmark {
+      left: 200px;
+      top: 190px;
+      z-index: 10;
+    }
+
+    .heading {
+      height: 950px;
+    }
+
+    #royalHeadline {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+    padding-top: 2rem;
+  }
+  }
+
+
+  @media only screen and (max-width: 420px) {
+    #castle {
+      left: 60px;
+      width: 250px;
+    }
+
+ #stairs {
+     
+      width: 330px;
+    }
+
+     .naar {
+      left: 55px;
+      
+    }
+
+    .i {
+      left: 153px;
+      
+    }
+
+    .ud {
+      left: 180px;
+      
+    }
+
+    .i2 {
+      left: 260px;
+      
+    }
+
+    .tide {
+      left: 110px;
+     
+    }
+
+    .questionmark {
+      left: 230px;
+      
+    }
+
+    .contest h2 {
+      font-size: 1.5rem;
+    }
+
+    #testimonialsHeadline {
+      
+      font-size: 1.5rem;
+    }
+
+    .hallOfFameArticle {
+      margin-inline: 10%;
+    }
+
+    .heading {
+      height: 850px;
+    }
 </style>

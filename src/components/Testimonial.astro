@@ -52,4 +52,18 @@ const { data } = Astro.props;
   i {
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 800px) {
+    .description {
+      max-width: 500px;
+    }
+
+    .fa-angle-left {
+      padding-left: 2rem;
+    }
+
+    .fa-angle-right {
+      padding-right: 2rem;
+    }
+  }
 </style>
