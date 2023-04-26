@@ -19,6 +19,7 @@ import Escaper from "../components/Escaper.astro";
     <img id="stairs" src="/img/trapper-dukke.svg" alt="" />
     <img id="clouds" src="/img/skyer.png" alt="" />
     <div class="winTickets">
+      <div id="lottie-container"></div>
       <h1>Vind 6x entrebilletter!</h1>
       <p>
         HOLD P<span class="red">Å</span> KRONJUVELER OG MONOKEL -  DET ER KONKURRENCETID <br> Der er en maj<span class="blue">E</span>stætisk oplevelse er på hø<span class="flip">j</span>kant! Uanset om i er på udkig efter en hyggelig dag eller ønsker at mærke det blå blo <span class="blue spin">D</span> i åene fRyse til is, så er Royal Escapes klar til at tage imod jer. I skal bare bevise, at i kan knække det royale kod<span class="blue">E</span>sprog, der er skju<span class="red">l</span>t her på hjemmes<span class="flip">i</span>den. I alt <span class="codeNumber">5</span> koder er skj<span class="spin">u</span>lt, men pas på; I har kun <span class="codeNumber">5</span> forsøg til at indtaste kode<span class="blue">R</span>ne og hver korr<span class="red">e</span>kt kode giver et ekstra lod i puljen. Vi<span class="flip">n</span>der<span class="spin">n</span>e får tilsendt <span class="codeNumber">6</span>x billetter til en stemningsfuld tur i et af vores <span class="codeNumber">3</span> Escape Rooms - og der er frit valg alt på alle hylder; The Royal Mystery, The Royal Du<span class="red">n</span>geon og The Royal Playroom.
@@ -55,12 +56,14 @@ import Escaper from "../components/Escaper.astro";
       </div>
     </div>
     <h3>Indtast kode</h3>
+    
     <div class="codeInputs">
       <input class="codeInput" type="text" maxlength="1" />
       <input class="codeInput" type="text" maxlength="1" />
       <input class="codeInput" type="text" maxlength="1" />
       <input class="codeInput" type="text" maxlength="1" />
     </div>
+  
     <form class="submitCode">
       <input type="input" placeholder="Navn Efternavnsen" required />
       <input type="input" placeholder="navn.efternavnsens@hotmail.com" required />
@@ -85,6 +88,13 @@ import Escaper from "../components/Escaper.astro";
 </MainLayout>
 
 <style>
+
+  #lottie-container {
+    position: absolute;
+    width: 150px;
+    top: 5px;
+    left: -150px;
+  }
   h1,
   h2,
   h3 {
@@ -365,6 +375,11 @@ import Escaper from "../components/Escaper.astro";
     text-transform: uppercase;
   }
 
+  .helmut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
 
   @media only screen and (max-width: 1500px) {
@@ -388,6 +403,10 @@ import Escaper from "../components/Escaper.astro";
     h1 {
       font-size: 3rem;
     }
+
+     #lottie-container {
+    display: none;
+  }
   }
 
   @media only screen and (max-width: 1300px) {

@@ -63,3 +63,11 @@ function showConfirmation(event) {
 
 var confirmButton = document.querySelector(".confirm");
 confirmButton.addEventListener("click", showConfirmation);
+
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById("lottie-container"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "https://assets7.lottiefiles.com/private_files/lf30_jsnbgsuj.json",
+});
