@@ -3,6 +3,7 @@ const { number } = Astro.props;
 const { team } = Astro.props;
 const { time } = Astro.props;
 const { hints } = Astro.props;
+const { image } = Astro.props;
 ---
 
 <div class="container">
@@ -21,7 +22,7 @@ const { hints } = Astro.props;
       <h4>&nbsp;{hints}</h4>
     </div>
   </div>
-  <img src="/img/art.webp" alt="" />
+  <img src={`/img/${image}.webp`} alt="" />
 </div>
 
 <style>
