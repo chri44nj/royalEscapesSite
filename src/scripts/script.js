@@ -14,7 +14,7 @@ document.querySelectorAll(".navItem").forEach((n) =>
   })
 );
 
-var countdownDate = new Date("May 4, 2023 00:00:00").getTime();
+var countdownDate = new Date("May 4, 2024 00:00:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countdownDate - now;
